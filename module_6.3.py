@@ -3,8 +3,8 @@ import random
 
 class Animal:
     live = True
-    sound = None  # звук
-    _DEGREE_OF_DANGER = 0  # степень опастности
+    sound = None  
+    _DEGREE_OF_DANGER = 0
 
     def __init__(self, speed):
         self._cords = [0, 0, 0]
@@ -30,7 +30,7 @@ class Animal:
 
 
 class Bird(Animal):
-    beak = True  # клюв есть
+    beak = True
 
     def lay_eggs(self):
         num_of_eggs = random.randint(1, 4)
@@ -50,7 +50,7 @@ class PoisonousAnimal(Animal):
 
 
 class Duckbill(PoisonousAnimal, Bird, AquaticAnimal):
-    sound = "Click-click-click"  # утконос
+    sound = "Click-click-click"
 
     def __init__(self, speed):
         super().__init__(speed)
